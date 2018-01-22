@@ -1,0 +1,43 @@
+{
+  "name": "@emartech/rabbitmq-worker",
+  "version": "0.0.0-development",
+  "description": "",
+  "engines": {
+    "node": "8.9.4",
+    "npm": "5.6.0"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp",
+    "code-style": "gulp style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emartech/node-rabbitmq-worker.git"
+  },
+  "author": "Emarsys",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/emartech/node-rabbitmq-worker/issues"
+  },
+  "homepage": "https://github.com/emartech/node-rabbitmq-worker#readme",
+  "dependencies": {
+    "@emartech/json-logger": "2.3.0",
+    "@emartech/rabbitmq-client": "2.2.0",
+    "config": "1.29.2",
+    "convert-keys": "1.2.0",
+    "lodash": "4.17.4",
+    "logentries-logformat": "0.2.0",
+    "throng": "4.0.0"
+  },
+  "devDependencies": {
+    "boar-tasks-server": "11.0.0",
+    "chai": "4.1.2",
+    "chai-as-promised": "7.1.1",
+    "eslint-config-emarsys": "4.0.0",
+    "eslint-plugin-require-path-exists": "1.1.7",
+    "gulp": "3.9.1",
+    "sinon": "4.1.6",
+    "sinon-chai": "2.14.0"
+  }
+}
