@@ -13,11 +13,6 @@
     "validate-commit-msg": "validate-commit-msg",
     "semantic-release": "semantic-release"
   },
-  "release": {
-    "verifyConditions": {
-      "path": "./node_modules/semantic-release/src/lib/plugin-noop.js"
-    }
-  },
   "pre-commit": [
     "code-style",
     "validate-commit-msg"
