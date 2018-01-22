@@ -21,7 +21,7 @@ MyWorker
   .execute({foo: 'bar'}, { option: 'foo' });
 ```
 
-### Ignition
+## Ignition
 
 Starts the given type of worker to consume a RabbitMQ queue.
 
