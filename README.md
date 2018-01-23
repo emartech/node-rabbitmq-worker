@@ -38,11 +38,16 @@ const workerPool = require('./worker-pool');
 Ignition.create(workerPool).start('MyWorker');
 ```
 
-### Configuration
+## RabbitMq
+
+See [`@emartech/rabbitmq-client`](https://www.npmjs.com/package/@emartech/rabbitmq-client) for more information.
+
+
+## Configuration
 
 `@emartech/rabbitmq-worker` uses [`node-config`](https://www.npmjs.com/package/config) `package for configuration.
 
-#### Required configuration example
+### Required configuration example
 ```javascript
 {
   "RabbitMQ": "rabbitmq://connection"
