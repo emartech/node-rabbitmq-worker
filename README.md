@@ -4,6 +4,22 @@
 
 Automatically logs worker failures with context and elapsed time on success run.
 
+### Methods
+
+#### retry(message, errorCode)
+
+Re-queues the currently processed message for retry.
+
+
+#### queueWorker(workerId, options)
+
+Starts a new worker with the given worker id.
+
+To set required keys in the options, set `requiredKeys` in the worker's configuration as an array. 
+
+
+### Example
+
 ```javascript
 const { BaseWorker } = require('@emartech/rabbitmq-worker');
 
@@ -14,8 +30,11 @@ class MyWorker extends BaseWorker {
     console.log(this.config.foo); // bar
     
     if (errorHappened) {
-      this.retry('Something happened', 400); // retry(<message, errorCode>) is a built-in method
+      this.retry('Something happened', 400);
     }
+    
+    
+    this.queueWorker('NextWorker', { newVar: 'foo' });
   }
 
 }
@@ -48,9 +67,9 @@ See [`@emartech/rabbitmq-client`](https://www.npmjs.com/package/@emartech/rabbit
 `@emartech/rabbitmq-worker` uses [`node-config`](https://www.npmjs.com/package/config) `package for configuration.
 
 ### Required configuration example
-```javascript
+```json
 {
-  "RabbitMQ": "rabbitmq://connection"
+  "RabbitMQ": "rabbitmq://connection",
   "Workers": {
     "MyWorker": { // All worker requires a config for it to run
       "queueName": "my-worker", // The queue's name to get options (message)
