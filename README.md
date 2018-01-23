@@ -38,10 +38,14 @@ const workerPool = require('./worker-pool');
 Ignition.create(workerPool).start('MyWorker');
 ```
 
-### Required configuration example
+### Configuration
 
+`@emartech/rabbitmq-worker` uses [`node-config`](https://www.npmjs.com/package/config) `package for configuration.
+
+#### Required configuration example
 ```javascript
 {
+  "RabbitMQ": "rabbitmq://connection"
   "Workers": {
     "MyWorker": { // All worker requires a config for it to run
       "queueName": "my-worker", // The queue's name to get options (message)
