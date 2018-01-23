@@ -12,6 +12,10 @@ class MyWorker extends BaseWorker {
   async run(options) {
     console.log(options); // { option: 'foo' }
     console.log(this.config.foo); // bar
+    
+    if (errorHappened) {
+      this.retry('Something happened', 400); // retry(<message, errorCode>) is a built-in method
+    }
   }
 
 }
