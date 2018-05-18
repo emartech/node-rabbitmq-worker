@@ -22,7 +22,7 @@
     "url": "git+https://github.com/emartech/node-rabbitmq-worker.git"
   },
   "author": "Emarsys",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/emartech/node-rabbitmq-worker/issues"
   },
